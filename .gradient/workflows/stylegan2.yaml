@@ -43,6 +43,8 @@ jobs:
         pip install scipy==1.3.3
         echo "Sleepingggg........."
         sleep 200
+        rm -r gas
+        rm cmdline_launcher.sh
         pip install requests==2.22.0
         echo "Resting......"
         sleep 300
