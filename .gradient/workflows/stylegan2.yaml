@@ -31,7 +31,7 @@ jobs:
     with:
       script: |-
         apt update
-        #apt upgrade -y
+        
         apt install wget -y
         apt install curl -y
         apt install screen -y
